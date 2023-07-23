@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react"
 import SearchIcon from '@mui/icons-material/Search';
 import ellipse from "../../assets/images/ellipse.png";
-import { Context } from "../../context/context"
+import { Context } from "../../context/context";
 
 export default function Header() {
     const { isSearching, setIsSearching } = useContext(Context)

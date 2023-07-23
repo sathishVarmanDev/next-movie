@@ -22,10 +22,10 @@ function ContextProvider(props) {
 
     return (
         <Context.Provider value={{
-            isSearching: { isSearching },
-            setIsSearching: { setIsSearching },
-            newReleases: { newReleases },
-            setNewReleases: { setNewReleases },
+            isSearching: isSearching,
+            setIsSearching: setIsSearching,
+            newReleases: newReleases,
+            setNewReleases: setNewReleases,
         }}>
             {props.children}
         </Context.Provider>
