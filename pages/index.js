@@ -1,20 +1,22 @@
 import Header from "./components/Header"
-import Hero from "./components/Hero";
-import React, { useState, useContext } from "react"
-import Provider from "../context/provider";
+import React, { useState, useContext, useEffect } from "react"
+import Results from "./components/Results";
+import Releases from "./components/Releases";
+import Footer from "./components/Footer";
+import { ContextProvider, Context } from "../context/context";
 
 export default function Home() {
-  const [isSearching, setIsSearching] = useState(false)
+
+  const { isSearching } = useContext(Context)
+
   return (
-    <Provider
-      value={isSearching}
-    >
+
       <div>
-        <Header
-          setIsSearching={setIsSearching}
-        />
-        <Hero />
+        <Header />
+        {
+          isSearching ? <Results /> : <Releases />
+        }
+        <Footer />
       </div>
-    </Provider>
   )
 }

@@ -1,13 +1,11 @@
 import React, { useState, useContext } from "react"
-import SearchContext from "../../context/context";
 import SearchIcon from '@mui/icons-material/Search';
 import ellipse from "../../assets/images/ellipse.png";
-import playButton from "../../assets/images/play-button.png";
-import search from "../../assets/images/search.png";
+import { Context } from "../../context/context"
 
-export default function Header({ setIsSearching }) {
-    const isSearching = useContext(SearchContext)
-    console.log("isSearching", isSearching);
+export default function Header() {
+    const { isSearching, setIsSearching } = useContext(Context)
+    console.log("isSearching",isSearching);
 
     return (
         <nav className="navbar navbar-expand-lg bg-body-tertiary header">
