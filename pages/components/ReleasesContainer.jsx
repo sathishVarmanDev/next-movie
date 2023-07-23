@@ -3,7 +3,7 @@ import Hero from './Hero'
 import NewReleases from './HeroComponents/NewReleases'
 export default function ReleasesContainer() {
     return (
-        <div>
+        <div className="">
             <Hero />
             <NewReleases />
         </div>

@@ -8,6 +8,7 @@ export default function Header() {
     console.log("isSearching",isSearching);
 
     return (
+        <div className="position-absolute" style={{ top: 0, left: 0, right: 0, backgroundColor: `transparent` }}>
         <nav className="navbar navbar-expand-lg bg-body-tertiary header">
             <div className="container-fluid">
                 <a className="navbar-brand navbar__company-name" href="#">PcariMovie</a>
@@ -50,5 +51,6 @@ export default function Header() {
                 </div>
             </div>
         </nav>
+        </div>
     )
 }

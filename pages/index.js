@@ -12,12 +12,14 @@ export default function Home() {
 
   return (
 
-      <div>
+    // <div className="container">
+      <div className="postion-relative">
         <Header />
         {
         isSearching ? <ResultsContainer /> : <ReleasesContainer />
         }
         <Footer />
       </div>
+      // </div>
   )
 }
